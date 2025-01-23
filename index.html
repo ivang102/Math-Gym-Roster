@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Gym - Who's on Duty</title>
+    <style>
+        /* Simple CSS for layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensure each item is at least 250px wide */
+            column-gap: 10px;
+            row-gap: 0px;
+            justify-content: center; /* Center the grid items */
+            max-width: 1000px; /* Set a max width to ensure up to 3 items per row */
+            margin: 0 auto; /* Center the grid container on the page */
+            padding: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        .spacer {
+           height: 400px; 
+        }
+        }
+        .tutor {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            display: block;
+            width: 300px;
+        }
+        .tutor img {
+            width: 150px;
+            height: 150px;
+            border-radius: 25%;
+        }
+        .status {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .on-duty {
+            color: green;
+        }
+        .off-duty {
+            color: red;
+        }
+        .tutor-details {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- On-Duty Grid -->
+    <h1>On-Duty Tutors</h1>
+    <div class="grid-container" id="onDutyGrid">
+        <!-- Tutors on duty will be moved here -->
+    </div>
+
+    <!-- Separates On-Duty and Off-Duty Grids -->
+    <div class="spacer"></div>
+    
+    <!-- Off-Duty Grid -->
+    <h1>Off-Duty Tutors</h1>
+    <div class="grid-container" id="offDutyGrid">
+        <!-- Tutors off duty will be moved here -->
+    </div>
+
+    <!-- Tutor Cards -->
+    <div style="display: none;">
+        <div class="tutor" id="tutor1">
+            <button onclick="toggleDuty('tutor1', 'status1')">Toggle Duty</button>
+            <p class="status off-duty" id="status1">Off Duty</p>
+            <h3>Adam</h3>
+            <div class="tutor-details">
+                <img src="Adam.jpg" alt="Adam">
+                <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Linear Algebra, Differential Equations</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor2">
+            <button onclick="toggleDuty('tutor2', 'status2')">Toggle Duty</button>
+            <p class="status off-duty" id="status2">Off Duty</p>
+            <h3>Benicio</h3>
+            <div class="tutor-details">
+                <img src="Benicio.jpg" alt="Benicio">
+                <p>Courses: Precalculus, Calculus I, Calculus II, Linear Algebra, Differential Equations</p>
+            </div>   
+        </div>
+
+        <div class="tutor" id="tutor3">
+            <button onclick="toggleDuty('tutor3', 'status3')">Toggle Duty</button>
+            <p class="status off-duty" id="status3">Off Duty</p>
+            <h3>Garrett</h3>
+            <div class="tutor-details">
+                <img src="Garrett.png" alt="Garrett">
+                <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Business Calc, Calc for Biosciences, Linear Algebra, Differential Equations</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor4">
+            <button onclick="toggleDuty('tutor4', 'status4')">Toggle Duty</button>
+            <p class="status off-duty" id="status4">Off Duty</p>
+            <h3>Ivan</h3>
+            <div class="tutor-details">
+                <img src="Ivan.jpg" alt="Ivan">
+                <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Linear Algebra, Differential Equations</p>
+            </div>      
+        </div>
+
+        <div class="tutor" id="tutor5">
+            <button onclick="toggleDuty('tutor5', 'status5')">Toggle Duty</button>
+            <p class="status off-duty" id="status5">Off Duty</p>
+            <h3>Jordan</h3>
+            <div class="tutor-details">
+                <img src="Jordan.jpg" alt="Jordan">
+                <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Linear Algebra, Differential Equations</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor6">
+            <button onclick="toggleDuty('tutor6', 'status6')">Toggle Duty</button>
+            <p class="status off-duty" id="status6">Off Duty</p>
+            <h3>Luca</h3>
+            <div class="tutor-details">
+                <img src="Luca.jpg" alt="Luca">
+                <p>Courses: Precalculus, Calculus I, Calculus II, Linear Algebra</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor7">
+            <button onclick="toggleDuty('tutor7', 'status7')">Toggle Duty</button>
+            <p class="status off-duty" id="status7">Off Duty</p>
+            <h3>Manuel</h3>
+            <div class="tutor-details">
+                <img src="Manuel.jpg" alt="Manuel">
+                <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Differential Equations</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor8">
+            <button onclick="toggleDuty('tutor8', 'status8')">Toggle Duty</button>
+            <p class="status off-duty" id="status8">Off Duty</p>
+            <h3>Alessandro</h3>
+            <div class="tutor-details">
+                <img src="Alessandro.jpg" alt="Alessandro">
+                <p>Courses: Precalculus, Calculus I, Linear Algebra</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor9">
+            <button onclick="toggleDuty('tutor9', 'status9')">Toggle Duty</button>
+            <p class="status off-duty" id="status9">Off Duty</p>
+            <h3>Nathan</h3>
+            <div class="tutor-details">
+                <img src="Nathan.jpg" alt="Nathan">
+                <p>Courses: Precalculus, Calculus I, Linear Algebra</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor10">
+            <button onclick="toggleDuty('tutor10', 'status10')">Toggle Duty</button>
+            <p class="status off-duty" id="status10">Off Duty</p>
+            <h3>Olivia</h3>
+            <div class="tutor-details">
+                <img src="Olivia.jpg" alt="Olivia">
+                <p>Courses: Precalculus, Calculus I, Calculus II</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor11">
+            <button onclick="toggleDuty('tutor11', 'status11')">Toggle Duty</button>
+            <p class="status off-duty" id="status11">Off Duty</p>
+            <h3>Thamara</h3>
+            <div class="tutor-details">
+                <img src="Thamara.jpg" alt="Thamara">
+                <p>Courses: Precalculus, Calculus I, Linear Algebra</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor12">
+            <button onclick="toggleDuty('tutor12', 'status12')">Toggle Duty</button>
+            <p class="status off-duty" id="status12">Off Duty</p>
+            <h3>Vicente</h3>
+            <div class="tutor-details">
+                <img src="Vicente.jpeg" alt="Vicente">
+                <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Linear Algebra</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to move tutors between on-duty and off-duty grids
+        function toggleDuty(tutorId, statusId) {
+            const tutorElement = document.getElementById(tutorId);
+            const statusElement = document.getElementById(statusId);
+            const isOffDuty = statusElement.classList.contains('off-duty');
+            const onDutyGrid = document.getElementById('onDutyGrid');
+            const offDutyGrid = document.getElementById('offDutyGrid');
+            const detailsElement = tutorElement.querySelector('.tutor-details');
+
+            // Toggle duty status
+            statusElement.classList.toggle('off-duty', !isOffDuty);
+            statusElement.classList.toggle('on-duty', isOffDuty);
+            statusElement.textContent = isOffDuty ? "" : "Off Duty";
+
+            // Show or hide details
+            detailsElement.style.display = isOffDuty ? "block" : "none";
+
+            // Move tutor to the appropriate grid
+            if (isOffDuty) {
+                onDutyGrid.appendChild(tutorElement);
+            } else {
+                offDutyGrid.appendChild(tutorElement);
+            }
+        }
+
+        // Initially hide tutor details for those off duty and add them to the off-duty grid
+        document.addEventListener('DOMContentLoaded', function () {
+            const tutors = document.querySelectorAll('.tutor');
+            const offDutyGrid = document.getElementById('offDutyGrid');
+            tutors.forEach(function (tutor) {
+                const statusElement = tutor.querySelector('.status');
+                if (statusElement.classList.contains('off-duty')) {
+                    offDutyGrid.appendChild(tutor); // Move to off-duty grid
+                }
+            });
+        });
+    </script>
+</body>
+</html>
