@@ -206,7 +206,7 @@
             // Toggle duty status
             statusElement.classList.toggle('off-duty', !isOffDuty);
             statusElement.classList.toggle('on-duty', isOffDuty);
-            //statusElement.textContent = isOffDuty ? "" : "Off Duty";
+            statusElement.textContent = isOffDuty ? "" : "Off Duty";
 
             // Show or hide details
             detailsElement.style.display = isOffDuty ? "block" : "none";
