@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Gym - Who's on Duty</title>
     <style>
         /* Simple CSS for layout */
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensure each item is at least 250px wide */
-            column-gap: 10px;
-            row-gap: 0px;
-            justify-content: center; /* Center the grid items */
-            max-width: 1000px; /* Set a max width to ensure up to 3 items per row */
-            margin: 0 auto; /* Center the grid container on the page */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* ✅ Center items when fewer than full row */
+            gap: 10px;
+            max-width: 1500px; /* Allows up to 4 per row */
+            margin: 0 auto;
             padding: 10px;
-            place-content: center;
-        }
+}
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+        }
         .spacer {
            height: 400px; 
         }
-        }
         .tutor {
+            width: 300px;
             margin: 10px;
             padding: 10px;
             border: 3px solid black;
-            display: block;
-            width: 300px;
             border-radius: 5%;
-        }
+            text-align: center;
+}
         .tutor img {
             width: 150px;
             height: 150px;
@@ -190,6 +187,36 @@
             <div class="tutor-details">
                 <img src="portraits/Vicente.jpeg" alt="Vicente">
                 <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Linear Algebra, Differential Equations</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor13">
+            <button onclick="toggleDuty('tutor13', 'status13')">Toggle Duty</button>
+            <p class="status off-duty" id="status13">Off Duty</p>
+            <h3>Thomas</h3>
+            <div class="tutor-details">
+                <img src="portraits/Thomas.jpeg" alt="Thomas">
+                <p>Courses: Precalculus, Calculus I, TODO</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor14">
+            <button onclick="toggleDuty('tutor14', 'status14')">Toggle Duty</button>
+            <p class="status off-duty" id="status14">Off Duty</p>
+            <h3>Christopher</h3>
+            <div class="tutor-details">
+                <img src="portraits/Christopher.jpeg" alt="Christopher">
+                <p>Courses: Precalculus, Calculus I, TODO</p>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor15">
+            <button onclick="toggleDuty('tutor15', 'status15')">Toggle Duty</button>
+            <p class="status off-duty" id="status15">Off Duty</p>
+            <h3>Marissa</h3>
+            <div class="tutor-details">
+                <img src="portraits/Marissa.jpeg" alt="Marissa">
+                <p>Courses: Precalculus, Calculus I, TODO</p>
             </div>
         </div>
     </div>
