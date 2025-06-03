@@ -10,8 +10,7 @@
             flex-wrap: wrap;
             justify-content: center; /* ✅ Center items when fewer than full row */
             gap: 10px;
-            max-width: 1500px; /* Allows up to 4 per row */
-            margin: 0 auto;
+            max-width: 4000px; /* Allows up to 4 per row */
             padding: 10px;
 }
         body {
@@ -28,9 +27,9 @@
         }
         .tutor {
             background-color: rgba(255, 255, 255, 0.8);
-            width: 300px;
-            margin: 10px;
-            padding: 10px;
+            width: 350px;
+            margin: 0px;
+            padding: 5px;
             border: 3px solid black;
             border-radius: 5%;
             text-align: center;
@@ -79,7 +78,7 @@
         <div class="tutor" id="tutor1">
             <button onclick="toggleDuty('tutor1', 'status1')">Toggle Duty</button>
             <p class="status off-duty" id="status1">Off Duty</p>
-            <h3>Adam</h3>
+            <h3 onclick="toggleDuty('tutor1', 'status1')">Adam</h3>
             <div class="tutor-details">
                 <img src="portraits/Adam.jpg" alt="Adam">
                 <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Linear Algebra, Differential Equations</p>
