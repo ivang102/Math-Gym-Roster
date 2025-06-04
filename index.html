@@ -3,65 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Simple CSS for layout */
-        .grid-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* ✅ Center items when fewer than full row */
-            gap: 10px;
-            max-width: 4000px; /* Allows up to 4 per row */
-            padding: 10px;
-}
-        body {
-            background-image: url('backgrounds/summer.jpg');
-            background-size: cover; /* Make it fill the screen */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed; /* Optional: keeps it fixed while scrolling */
-            font-family: Arial, sans-serif;
-            text-align: center;
-}
-        .spacer {
-           height: 400px; 
-        }
-        .tutor {
-            background-color: rgba(255, 255, 255, 0.8);
-            width: 350px;
-            margin: 0px;
-            padding: 5px;
-            border: 3px solid black;
-            border-radius: 5%;
-            text-align: center;
-}
-        .tutor img {
-            width: 150px;
-            height: 150px;
-            border: 3px solid gray;
-        }
-        .status {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        .on-duty {
-            color: green;
-        }
-        .off-duty {
-            color: red;
-        }
-        .tutor-details {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
 
     <!-- On-Duty Grid -->
-    <h1>On-Duty Tutors</h1>
-    <h1>Please Raise Your Hand For Help</h1>
+    <h1>These Tutors Are Here to Help — Just Raise Your Hand!</h1>
     <div class="grid-container" id="onDutyGrid">
-        <!-- Tutors on duty will be moved here -->
+        <!-- Tutors on duty are moved here -->
     </div>
 
     <!-- Separates On-Duty and Off-Duty Grids -->
@@ -70,15 +19,14 @@
     <!-- Off-Duty Grid -->
     <h1>Off-Duty Tutors</h1>
     <div class="grid-container" id="offDutyGrid">
-        <!-- Tutors off duty will be moved here -->
+        <!-- Tutors off duty are moved here -->
     </div>
 
     <!-- Tutor Cards -->
     <div style="display: none;">
         <div class="tutor" id="tutor1">
-            <button onclick="toggleDuty('tutor1', 'status1')">Toggle Duty</button>
-            <p class="status off-duty" id="status1">Off Duty</p>
-            <h3 onclick="toggleDuty('tutor1', 'status1')">Adam</h3>
+            <button class="toggle-btn" id="btn1" onclick="toggleDuty('tutor1', 'btn1')" title="Mark as On Duty">&#10003;</button>
+            <h3>Adam</h3>
             <div class="tutor-details">
                 <img src="portraits/Adam.jpg" alt="Adam">
                 <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Linear Algebra, Differential Equations</p>
@@ -86,8 +34,7 @@
         </div>
 
         <div class="tutor" id="tutor2">
-            <button onclick="toggleDuty('tutor2', 'status2')">Toggle Duty</button>
-            <p class="status off-duty" id="status2">Off Duty</p>
+            <button class="toggle-btn" id="btn2" onclick="toggleDuty('tutor2', 'btn2')" title="Mark as On Duty">&#10003;</button>
             <h3>Benicio</h3>
             <div class="tutor-details">
                 <img src="portraits/Benicio.jpg" alt="Benicio">
@@ -96,8 +43,7 @@
         </div>
 
         <div class="tutor" id="tutor3">
-            <button onclick="toggleDuty('tutor3', 'status3')">Toggle Duty</button>
-            <p class="status off-duty" id="status3">Off Duty</p>
+            <button class="toggle-btn" id="btn3" onclick="toggleDuty('tutor3', 'btn3')" title="Mark as On Duty">&#10003;</button>
             <h3>Garrett</h3>
             <div class="tutor-details">
                 <img src="portraits/Garrett.png" alt="Garrett">
@@ -106,8 +52,7 @@
         </div>
 
         <div class="tutor" id="tutor4">
-            <button onclick="toggleDuty('tutor4', 'status4')">Toggle Duty</button>
-            <p class="status off-duty" id="status4">Off Duty</p>
+            <button class="toggle-btn" id="btn4" onclick="toggleDuty('tutor4', 'btn4')" title="Mark as On Duty">&#10003;</button>
             <h3>Ivan</h3>
             <div class="tutor-details">
                 <img src="portraits/Ivan.jpg" alt="Ivan">
@@ -116,8 +61,7 @@
         </div>
 
         <div class="tutor" id="tutor5">
-            <button onclick="toggleDuty('tutor5', 'status5')">Toggle Duty</button>
-            <p class="status off-duty" id="status5">Off Duty</p>
+            <button class="toggle-btn" id="btn5" onclick="toggleDuty('tutor5', 'btn5')" title="Mark as On Duty">&#10003;</button>
             <h3>Jordan</h3>
             <div class="tutor-details">
                 <img src="portraits/Jordan.jpg" alt="Jordan">
@@ -126,8 +70,7 @@
         </div>
 
         <div class="tutor" id="tutor6">
-            <button onclick="toggleDuty('tutor6', 'status6')">Toggle Duty</button>
-            <p class="status off-duty" id="status6">Off Duty</p>
+            <button class="toggle-btn" id="btn6" onclick="toggleDuty('tutor6', 'btn6')" title="Mark as On Duty">&#10003;</button>
             <h3>Luca</h3>
             <div class="tutor-details">
                 <img src="portraits/Luca.jpg" alt="Luca">
@@ -136,8 +79,7 @@
         </div>
 
         <div class="tutor" id="tutor7">
-            <button onclick="toggleDuty('tutor7', 'status7')">Toggle Duty</button>
-            <p class="status off-duty" id="status7">Off Duty</p>
+            <button class="toggle-btn" id="btn7" onclick="toggleDuty('tutor7', 'btn7')" title="Mark as On Duty">&#10003;</button>
             <h3>Manuel</h3>
             <div class="tutor-details">
                 <img src="portraits/Manuel.jpg" alt="Manuel">
@@ -146,8 +88,7 @@
         </div>
 
         <div class="tutor" id="tutor8">
-            <button onclick="toggleDuty('tutor8', 'status8')">Toggle Duty</button>
-            <p class="status off-duty" id="status8">Off Duty</p>
+            <button class="toggle-btn" id="btn8" onclick="toggleDuty('tutor8', 'btn8')" title="Mark as On Duty">&#10003;</button>
             <h3>Alessandro</h3>
             <div class="tutor-details">
                 <img src="portraits/Alessandro.jpg" alt="Alessandro">
@@ -156,8 +97,7 @@
         </div>
 
         <div class="tutor" id="tutor9">
-            <button onclick="toggleDuty('tutor9', 'status9')">Toggle Duty</button>
-            <p class="status off-duty" id="status9">Off Duty</p>
+            <button class="toggle-btn" id="btn9" onclick="toggleDuty('tutor9', 'btn9')" title="Mark as On Duty">&#10003;</button>
             <h3>Nathan</h3>
             <div class="tutor-details">
                 <img src="portraits/Nathan.jpg" alt="Nathan">
@@ -166,8 +106,7 @@
         </div>
 
         <div class="tutor" id="tutor10">
-            <button onclick="toggleDuty('tutor10', 'status10')">Toggle Duty</button>
-            <p class="status off-duty" id="status10">Off Duty</p>
+            <button class="toggle-btn" id="btn10" onclick="toggleDuty('tutor10', 'btn10')" title="Mark as On Duty">&#10003;</button>
             <h3>Olivia</h3>
             <div class="tutor-details">
                 <img src="portraits/Olivia.jpg" alt="Olivia">
@@ -176,8 +115,7 @@
         </div>
 
         <div class="tutor" id="tutor11">
-            <button onclick="toggleDuty('tutor11', 'status11')">Toggle Duty</button>
-            <p class="status off-duty" id="status11">Off Duty</p>
+            <button class="toggle-btn" id="btn11" onclick="toggleDuty('tutor11', 'btn11')" title="Mark as On Duty">&#10003;</button>
             <h3>Thamara</h3>
             <div class="tutor-details">
                 <img src="portraits/Thamara.jpg" alt="Thamara">
@@ -186,83 +124,64 @@
         </div>
 
         <div class="tutor" id="tutor12">
-            <button onclick="toggleDuty('tutor12', 'status12')">Toggle Duty</button>
-            <p class="status off-duty" id="status12">Off Duty</p>
+            <button class="toggle-btn" id="btn12" onclick="toggleDuty('tutor12', 'btn12')" title="Mark as On Duty">&#10003;</button>
             <h3>Vicente</h3>
             <div class="tutor-details">
-                <img src="portraits/Vicente.jpeg" alt="Vicente">
+                <img src="portraits/Vicente.jpg" alt="Vicente">
+                <p class="accessibility-note">I am visually impaired, please call my name if you need any help!</p>
                 <p>Courses: Precalculus, Calculus I, Calculus II, Calculus III, Linear Algebra, Differential Equations</p>
             </div>
         </div>
 
         <div class="tutor" id="tutor13">
-            <button onclick="toggleDuty('tutor13', 'status13')">Toggle Duty</button>
-            <p class="status off-duty" id="status13">Off Duty</p>
-            <h3>Thomas</h3>
+            <button class="toggle-btn" id="btn13" onclick="toggleDuty('tutor13', 'btn13')" title="Mark as On Duty">&#10003;</button>
+            <h3>Elie</h3>
             <div class="tutor-details">
-                <img src="portraits/Thomas.jpeg" alt="Thomas">
+                <img src="portraits/Elie.jpg" alt="Elie">
                 <p>Courses: Precalculus, Calculus I, TODO</p>
             </div>
         </div>
 
         <div class="tutor" id="tutor14">
-            <button onclick="toggleDuty('tutor14', 'status14')">Toggle Duty</button>
-            <p class="status off-duty" id="status14">Off Duty</p>
-            <h3>Christopher</h3>
+            <button class="toggle-btn" id="btn14" onclick="toggleDuty('tutor14', 'btn14')" title="Mark as On Duty">&#10003;</button>
+            <h3>Chris</h3>
             <div class="tutor-details">
-                <img src="portraits/Christopher.jpeg" alt="Christopher">
+                <img src="portraits/Chris.jpg" alt="Chris">
                 <p>Courses: Precalculus, Calculus I, TODO</p>
             </div>
         </div>
 
         <div class="tutor" id="tutor15">
-            <button onclick="toggleDuty('tutor15', 'status15')">Toggle Duty</button>
-            <p class="status off-duty" id="status15">Off Duty</p>
+            <button class="toggle-btn" id="btn15" onclick="toggleDuty('tutor15', 'btn15')" title="Mark as On Duty">&#10003;</button>
             <h3>Marissa</h3>
             <div class="tutor-details">
-                <img src="portraits/Marissa.jpeg" alt="Marissa">
+                <img src="portraits/Marissa.jpg" alt="Marissa">
                 <p>Courses: Precalculus, Calculus I, TODO</p>
             </div>
         </div>
+
+        <div class="tutor" id="tutor16">
+            <button class="toggle-btn" id="btn16" onclick="toggleDuty('tutor16', 'btn16')" title="Mark as On Duty">&#10003;</button>
+            <h3>Taylor</h3>
+            <div class="tutor-details">
+                <img src="portraits/Taylor.jpg" alt="Taylor">
+                <p>Courses: Precalculus, Calculus I, TODO</p>
+            </div>
+        </div>        
+    </div> 
+
+    <!-- Dropdown menu for selecting background image -->
+    <div class="background-selector">
+        <label for="backgroundSelect" style="font-weight: bold; font-size: 1.5em;">Choose Background:</label>
+        <select id="backgroundSelect">
+            <option value="backgrounds/white.jpg">White</option>  
+            <option value="backgrounds/black.jpg">Black</option>             
+            <option value="backgrounds/summer.jpg" selected>Summer</option>
+            <option value="backgrounds/fall.jpg">Fall</option>
+        </select>
     </div>
 
-    <script>
-        // Function to move tutors between on-duty and off-duty grids
-        function toggleDuty(tutorId, statusId) {
-            const tutorElement = document.getElementById(tutorId);
-            const statusElement = document.getElementById(statusId);
-            const isOffDuty = statusElement.classList.contains('off-duty');
-            const onDutyGrid = document.getElementById('onDutyGrid');
-            const offDutyGrid = document.getElementById('offDutyGrid');
-            const detailsElement = tutorElement.querySelector('.tutor-details');
+    <script src="script.js"></script>
 
-            // Toggle duty status
-            statusElement.classList.toggle('off-duty', !isOffDuty);
-            statusElement.classList.toggle('on-duty', isOffDuty);
-            statusElement.textContent = isOffDuty ? "" : "Off Duty";
-
-            // Show or hide details
-            detailsElement.style.display = isOffDuty ? "block" : "none";
-
-            // Move tutor to the appropriate grid
-            if (isOffDuty) {
-                onDutyGrid.appendChild(tutorElement);
-            } else {
-                offDutyGrid.appendChild(tutorElement);
-            }
-        }
-
-        // Initially hide tutor details for those off duty and add them to the off-duty grid
-        document.addEventListener('DOMContentLoaded', function () {
-            const tutors = document.querySelectorAll('.tutor');
-            const offDutyGrid = document.getElementById('offDutyGrid');
-            tutors.forEach(function (tutor) {
-                const statusElement = tutor.querySelector('.status');
-                if (statusElement.classList.contains('off-duty')) {
-                    offDutyGrid.appendChild(tutor); // Move to off-duty grid
-                }
-            });
-        });
-    </script>
 </body>
 </html>
