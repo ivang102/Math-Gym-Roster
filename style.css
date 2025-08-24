@@ -10,7 +10,7 @@
 
 /* Background */
 body {
-    background-image: url('backgrounds/summer.jpg');
+    background-image: url('backgrounds/fall.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,7 +60,7 @@ h1 {
     width: 200px;
     height: 200px;
     border: 3px solid gray;
-    border-radius: 10%
+    border-radius: 10%;
 }
 
 /* Toggle Button */
@@ -74,6 +74,10 @@ h1 {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.toggle-btn:hover {
+    transform: scale(2);
 }
 
 /* Hide Tutor Details Initially and Font Size for Supported Courses */
@@ -96,8 +100,8 @@ h1 {
     display: inline-block;
 }
 
-/* Adjusted Spacing for Vicente */
-#tutor12 p {
+/* Adjusted Spacing for Vicente to fit Accessibility Note */
+#tutor10 p {
     margin-top: 5px;
     padding-top: 0px;
 }
