@@ -1,14 +1,4 @@
-/* Layout and Positioning for the Tutor Cards*/
-.grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    max-width: 4000px;
-    padding: 10px;
-}
-
-/* Background */
+/* Background and Font */
 body {
     background-image: url('backgrounds/fall.jpg');
     background-size: cover;
@@ -32,6 +22,16 @@ h1 {
     font-weight: bold;
 }
 
+/* Layout and Positioning for the Tutor Cards */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+
 /* Invisible Spacer between On-Duty and Off-Duty Grids*/
 .spacer {
     height: 800px; 
@@ -41,33 +41,90 @@ h1 {
 .tutor {
     position: relative;
     background-color: rgba(255, 255, 255, 0.85);
-    width: 350px;
+    width: 480px;
     margin: 0px;
-    padding: 2px;
+    padding: 18px;
     border: 3px solid black;
     border-radius: 5%;
     text-align: center;
+    overflow: hidden;
+}
+
+/* Shrink Tutor Cards when Off-Duty */
+.tutor.off-duty {
+    width: 230px;
+}
+
+/* Layout for Tutor Card Contents */
+.tutor-card-flex {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1rem;
+    min-height: 220px;
+}
+
+/* Center Content when Off-Duty*/
+.tutor.off-duty .tutor-card-flex {
+    justify-content: center;
+}
+
+/* Expand Left Section if Right Section is Hidden */
+.tutor-card-flex:has(.tutor-right[style*="display: none"]) .tutor-left {
+    flex: 1 1 100%;
+    min-width: 100px;
+}
+
+/* Left Section of Tutor Cards (Names and Portraits) */
+.tutor-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    padding-right: 0px;
+    height: 100%;
 }
 
 /* Names */
 .tutor h3 {
-    font-size: 1.8em;
-    margin: 15px 0;
+    font-size: 2.2em;
+    margin: 15px 0 10px 0;
 }
 
 /* Potraits */
 .tutor img {
-    width: 200px;
-    height: 200px;
-    border: 3px solid gray;
-    border-radius: 10%;
+    width: 180px;
+    height: 180px;
+    border: 2px solid gray;
+    border-radius: 5%;
+}
+
+/* "Supported Courses:" text */
+.supported-courses-label {
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: left;
+    margin-left: 0.5em;
+}
+
+/* List of Courses */
+.courses-list {
+    text-align: left;
+    margin: 0.5em 0 0.5em 0.5em;
+    padding-left: 0.5em;
+    font-size: 1.3em;
 }
 
 /* Toggle Button */
 .toggle-btn {
     position: absolute;
     top: 5px;
-    right: 10px;
+    right: 8px;
+    z-index: 2;
     font-size: 20px;
     font-weight: bold;
     color: black;
@@ -76,44 +133,39 @@ h1 {
     cursor: pointer;
 }
 
+/* Enlarge Toggle Button on Hover */
 .toggle-btn:hover {
     transform: scale(2);
 }
 
-/* Hide Tutor Details Initially and Font Size for Supported Courses */
-.tutor-details {
-    display: none;
-    font-size: 1.2em;
-    margin: 0px 2px;
-}
-
 /* Vicente's Accessibility Note*/
 .accessibility-note {
-    font-size: 1.0em;
+    font-size: 1.2em;
     font-style: italic;
-    color: #444;
-    margin: 0px;
-    background-color: #fdf6c9;
-    border-radius: 10px;
-    border: 2px solid yellow;
-    padding: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: blue;
+    padding: 3px 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
     display: inline-block;
 }
 
-/* Adjusted Spacing for Vicente to fit Accessibility Note */
-#tutor11 p {
-    margin-top: 5px;
-    padding-top: 0px;
+/* Hide Vicente's note when off duty */
+.tutor.off-duty .accessibility-note {
+    display: none;
 }
 
 /*Background Selector*/
 .background-selector {
-  background-color: rgba(127, 127, 127, 0.8); /* white-ish */
+  background-color: rgba(127, 127, 127, 0.8);
   border: 3px solid black;
   border-radius: 20px;
   padding: 10px 15px;
-  display: inline-block; /* keep the width tight to contents */
-  margin: 10px auto; /* space above and below */
+  display: inline-block;
+  margin: 10px auto;
 }
 
 /* Background Drop-Down */

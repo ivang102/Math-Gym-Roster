@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
     <!-- On-Duty Grid -->
     <h1>These Tutors Are Here to Help — Just Raise Your Hand!</h1>
     <div class="grid-container" id="onDutyGrid">
@@ -28,246 +27,543 @@
         <!-- UTAs -->
         <div class="tutor" id="tutor1">
             <button class="toggle-btn" id="btn1" onclick="toggleDuty('tutor1', 'btn1')" title="Mark as On Duty">&#10003;</button>
-            <h3>Adam</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Adam.jpg" alt="Adam">
-                <p>Courses: Precalculus, Calculus (I-III, Biosciences), Linear Algebra (I, Applied), Differential Equations, Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Adam.jpg" alt="Adam">
+                    <h3>Adam</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Biosciences</li>
+                        <li>Linear Algebra</li>
+                        <li>Applied Linear Algebra</li>
+                        <li>Differential Equations</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor2">
             <button class="toggle-btn" id="btn2" onclick="toggleDuty('tutor2', 'btn2')" title="Mark as On Duty">&#10003;</button>
-            <h3>Alex</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Alex.jpg" alt="Alex">
-                <p>Courses: Precalculus, Calculus I</p>
-            </div>   
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Alex.jpg" alt="Alex">
+                    <h3>Alex</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="tutor" id="tutor3">
             <button class="toggle-btn" id="btn3" onclick="toggleDuty('tutor3', 'btn3')" title="Mark as On Duty">&#10003;</button>
-            <h3>Benicio</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Benicio.jpg" alt="Benicio">
-                <p>Courses:</p>
-            </div>      
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Benicio.jpg" alt="Benicio">
+                    <h3>Benicio</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Math</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="tutor" id="tutor4">
             <button class="toggle-btn" id="btn4" onclick="toggleDuty('tutor4', 'btn4')" title="Mark as On Duty">&#10003;</button>
-            <h3>Ivan</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Ivan.jpg" alt="Ivan">
-                <p>Courses: Precalculus, Calculus (I-III, Business), Linear Algebra I, Differential Equations</p>
-            </div>      
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Ivan.jpg" alt="Ivan">
+                    <h3>Ivan</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Business</li>
+                        <li>Linear Algebra</li>
+                        <li>Differential Equations</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="tutor" id="tutor5">
             <button class="toggle-btn" id="btn5" onclick="toggleDuty('tutor5', 'btn5')" title="Mark as On Duty">&#10003;</button>
-            <h3>Jordan</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Jordan.jpg" alt="Jordan">
-                <p>Courses: Precalculus, Calculus (I-III, Business, Biosciences), Linear Algebra (I, Applied), Differential Equations, Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Jordan.jpg" alt="Jordan">
+                    <h3>Jordan</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Business</li>
+                        <li>Calculus for Biosciences</li>
+                        <li>Linear Algebra</li>
+                        <li>Applied Linear Algebra</li>
+                        <li>Differential Equations</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor6">
             <button class="toggle-btn" id="btn6" onclick="toggleDuty('tutor6', 'btn6')" title="Mark as On Duty">&#10003;</button>
-            <h3>Luca</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Luca.jpg" alt="Luca">
-                <p>Courses: Precalculus, Calculus (I-II, Business, Biosciences), Linear Algebra (I, Applied), Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Luca.jpg" alt="Luca">
+                    <h3>Luca</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus for Business</li>
+                        <li>Calculus for Biosciences</li>
+                        <li>Linear Algebra</li>
+                        <li>Applied Linear Algebra</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor7">
             <button class="toggle-btn" id="btn7" onclick="toggleDuty('tutor7', 'btn7')" title="Mark as On Duty">&#10003;</button>
-            <h3>Manuel</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Manuel.jpg" alt="Manuel">
-                <p>Courses: Precalculus, Calculus (I-III), Differential Equations</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Manuel.jpg" alt="Manuel">
+                    <h3>Manuel</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Differential Equations</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor8">
             <button class="toggle-btn" id="btn8" onclick="toggleDuty('tutor8', 'btn8')" title="Mark as On Duty">&#10003;</button>
-            <h3>Nathan</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Nathan.jpg" alt="Nathan">
-                <p>Courses: Precalculus, Calculus I, Linear Algebra I</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Nathan.jpg" alt="Nathan">
+                    <h3>Nathan</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Linear Algebra</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor9">
             <button class="toggle-btn" id="btn9" onclick="toggleDuty('tutor9', 'btn9')" title="Mark as On Duty">&#10003;</button>
-            <h3>Olivia</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Olivia.jpg" alt="Olivia">
-                <p>Courses: Precalculus, Calculus (I-II), Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Olivia.jpg" alt="Olivia">
+                    <h3>Olivia</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor10">
             <button class="toggle-btn" id="btn10" onclick="toggleDuty('tutor10', 'btn10')" title="Mark as On Duty">&#10003;</button>
-            <h3>Thamara</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Thamara.jpg" alt="Thamara">
-                <p>Courses: Precalculus, Calculus (I, Business)</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Thamara.jpg" alt="Thamara">
+                    <h3>Thamara</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus for Business</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor11">
             <button class="toggle-btn" id="btn11" onclick="toggleDuty('tutor11', 'btn11')" title="Mark as On Duty">&#10003;</button>
-            <h3>Vicente</h3>
-            <div class="tutor-details">
-                <img src="portraits/UTAs/Vicente.jpg" alt="Vicente">
-                <p class="accessibility-note">I am visually impaired, please call my name if you need any help!</p>
-                <p>Courses: Precalculus, Calculus (I-III, Business), Linear Algebra I, Differential Equations, Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Vicente.jpg" alt="Vicente">
+                    <h3>Vicente</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Business</li>
+                        <li>Linear Algebra</li>
+                        <li>Differential Equations</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
+            <div class="accessibility-note">I am visually impaired, please call me if you need help!</div>
         </div>
 
         <!-- GTAs -->
         <div class="tutor" id="tutor12">
             <button class="toggle-btn" id="btn12" onclick="toggleDuty('tutor12', 'btn12')" title="Mark as On Duty">&#10003;</button>
-            <h3>Cris</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Cris.jpg" alt="Cris">
-                <p>Courses: Precalculus, Calculus (I-III, Business, Biosciences), Linear Algebra (I, Applied)</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Cris.jpg" alt="Cris">
+                    <h3>Cris</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Business</li>
+                        <li>Calculus for Biosciences</li>
+                        <li>Linear Algebra</li>
+                        <li>Applied Linear Algebra</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor13">
             <button class="toggle-btn" id="btn13" onclick="toggleDuty('tutor13', 'btn13')" title="Mark as On Duty">&#10003;</button>
-            <h3>Diego</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Diego.jpg" alt="Diego">
-                <p>Courses: Calculus I</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Diego.jpg" alt="Diego">
+                    <h3>Diego</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Calculus I</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor14">
             <button class="toggle-btn" id="btn14" onclick="toggleDuty('tutor14', 'btn14')" title="Mark as On Duty">&#10003;</button>
-            <h3>Eloy</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Eloy.jpg" alt="Eloy">
-                <p>Courses: Precalculus, Calculus (I-III), Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Eloy.jpg" alt="Eloy">
+                    <h3>Eloy</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor15">
             <button class="toggle-btn" id="btn15" onclick="toggleDuty('tutor15', 'btn15')" title="Mark as On Duty">&#10003;</button>
-            <h3>Gabriella</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Gabriella.jpg" alt="Gabriella">
-                <p>Courses: Precalculus</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Gabriella.jpg" alt="Gabriella">
+                    <h3>Gabriella</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor16">
             <button class="toggle-btn" id="btn16" onclick="toggleDuty('tutor16', 'btn16')" title="Mark as On Duty">&#10003;</button>
-            <h3>Garrett</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Garrett.jpg" alt="Garrett">
-                <p>Courses: Precalculus, Calculus (I-III, Business, Biosciences), Linear Algebra (I, Applied), Differential Equations, Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Garrett.jpg" alt="Garrett">
+                    <h3>Garrett</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Business</li>
+                        <li>Calculus for Biosciences</li>
+                        <li>Linear Algebra</li>
+                        <li>Applied Linear Algebra</li>
+                        <li>Differential Equations</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor17">
             <button class="toggle-btn" id="btn17" onclick="toggleDuty('tutor17', 'btn17')" title="Mark as On Duty">&#10003;</button>
-            <h3>Gavin</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Gavin.jpg" alt="Gavin">
-                <p>Courses: Precalculus, Calculus (I-II), Differential Equations</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Gavin.jpg" alt="Gavin">
+                    <h3>Gavin</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Differential Equations</li>
+                    </ul>
+                </div>
             </div>
         </div>        
 
         <div class="tutor" id="tutor18">
             <button class="toggle-btn" id="btn18" onclick="toggleDuty('tutor18', 'btn18')" title="Mark as On Duty">&#10003;</button>
-            <h3>Jake</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Jake.jpg" alt="Jake">
-                <p>Courses: Precalculus, Calculus (I-III, Business), Linear Algebra (I, Applied), Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Jake.jpg" alt="Jake">
+                    <h3>Jake</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Business</li>
+                        <li>Linear Algebra</li>
+                        <li>Applied Linear Algebra</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>   
 
         <div class="tutor" id="tutor19">
             <button class="toggle-btn" id="btn19" onclick="toggleDuty('tutor19', 'btn19')" title="Mark as On Duty">&#10003;</button>
-            <h3>Josiah</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Josiah.jpg" alt="Josiah">
-                <p>Courses: Precalculus, Calculus (I-III, Business), Linear Algebra, Differential Equations</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Josiah.jpg" alt="Josiah">
+                    <h3>Josiah</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Business</li>
+                        <li>Linear Algebra</li>
+                        <li>Differential Equations</li>
+                    </ul>
+                </div>
             </div>
         </div>   
 
         <div class="tutor" id="tutor20">
             <button class="toggle-btn" id="btn20" onclick="toggleDuty('tutor20', 'btn20')" title="Mark as On Duty">&#10003;</button>
-            <h3>Kayla</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Kayla.jpg" alt="Kayla">
-                <p>Courses: Precalculus, Calculus (I-III), Linear Algebra, Differential Equations, Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Kayla.jpg" alt="Kayla">
+                    <h3>Kayla</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Linear Algebra</li>
+                        <li>Differential Equations</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>   
 
         <div class="tutor" id="tutor21">
             <button class="toggle-btn" id="btn21" onclick="toggleDuty('tutor21', 'btn21')" title="Mark as On Duty">&#10003;</button>
-            <h3>Kyana</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Kyana.jpg" alt="Kyana">
-                <p>Courses: Calculus I</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Kyana.jpg" alt="Kyana">
+                    <h3>Kyana</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Calculus I</li>
+                    </ul>
+                </div>
             </div>
         </div>   
 
         <div class="tutor" id="tutor22">
             <button class="toggle-btn" id="btn22" onclick="toggleDuty('tutor22', 'btn22')" title="Mark as On Duty">&#10003;</button>
-            <h3>Marissa</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Marissa.jpg" alt="Marissa">
-                <p>Courses: Precalculus, Calculus (I-II, Business)</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Marissa.jpg" alt="Marissa">
+                    <h3>Marissa</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus for Business</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="tutor" id="tutor23">
             <button class="toggle-btn" id="btn23" onclick="toggleDuty('tutor23', 'btn23')" title="Mark as On Duty">&#10003;</button>
-            <h3>McCrea</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/McCrea.jpg" alt="McCrea">
-                <p>Courses: Calculus (I-III), Linear Algebra I, Differential Equations, Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/McCrea.jpg" alt="McCrea">
+                    <h3>McCrea</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Linear Algebra</li>
+                        <li>Differential Equations</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>   
 
         <div class="tutor" id="tutor24">
             <button class="toggle-btn" id="btn24" onclick="toggleDuty('tutor24', 'btn24')" title="Mark as On Duty">&#10003;</button>
-            <h3>Nastaran</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Nastaran.jpg" alt="Nastaran">
-                <p>Courses: Precalculus</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Nastaran.jpg" alt="Nastaran">
+                    <h3>Nastaran</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                    </ul>
+                </div>
             </div>
         </div>   
 
         <div class="tutor" id="tutor25">
             <button class="toggle-btn" id="btn25" onclick="toggleDuty('tutor25', 'btn25')" title="Mark as On Duty">&#10003;</button>
-            <h3>Oscar</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Oscar.jpg" alt="Oscar">
-                <p>Courses: Precalculus, Calculus (I-II, Biosciences), Linear Algebra, Differential Equations</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Oscar.jpg" alt="Oscar">
+                    <h3>Oscar</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus for Biosciences</li>
+                        <li>Linear Algebra</li>
+                        <li>Differential Equations</li>
+                    </ul>
+                </div>
             </div>
         </div>   
 
         <div class="tutor" id="tutor26">
             <button class="toggle-btn" id="btn26" onclick="toggleDuty('tutor26', 'btn26')" title="Mark as On Duty">&#10003;</button>
-            <h3>Ruben</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Ruben.jpg" alt="Ruben">
-                <p>Courses: Precalculus</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Ruben.jpg" alt="Ruben">
+                    <h3>Ruben</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                    </ul>
+                </div>
             </div>
-        </div>   
+        </div>  
 
         <div class="tutor" id="tutor27">
             <button class="toggle-btn" id="btn27" onclick="toggleDuty('tutor27', 'btn27')" title="Mark as On Duty">&#10003;</button>
-            <h3>Terrence</h3>
-            <div class="tutor-details">
-                <img src="portraits/GTAs/Terrence.jpg" alt="Terrence">
-                <p>Courses: Precalculus, Calculus (I, Biosciences), Differential Equations, Algebra & Number Systems</p>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Terrence.jpg" alt="Terrence">
+                    <h3>Terrence</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus for Business</li>
+                        <li>Differential Equations</li>
+                        <li>Algebra & Number Systems</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
