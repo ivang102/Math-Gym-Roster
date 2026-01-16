@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <!-- Warning Message -->
+    <h1 class="warning">Please Make Sure You Sign In and Out at the Front of the Room!</h1>
+
     <!-- On-Duty Grid -->
     <h1>These Tutors Are Here to Help — Just Raise Your Hand!</h1>
     <div class="grid-container" id="onDutyGrid">
@@ -29,30 +32,6 @@
             <button class="toggle-btn" id="btn1" onclick="toggleDuty('tutor1', 'btn1')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
-                    <img src="portraits/UTAs/Adam.jpg" alt="Adam">
-                    <h3>Adam</h3>
-                </div>
-                <div class="tutor-right">
-                    <div class="supported-courses-label">Supported Courses:</div>
-                    <ul class="courses-list">
-                        <li>Precalculus</li>
-                        <li>Calculus I</li>
-                        <li>Calculus II</li>
-                        <li>Calculus III</li>
-                        <li>Calculus for Biosciences</li>
-                        <li>Linear Algebra</li>
-                        <li>Applied Linear Algebra</li>
-                        <li>Differential Equations</li>
-                        <li>Algebra & Number Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="tutor" id="tutor2">
-            <button class="toggle-btn" id="btn2" onclick="toggleDuty('tutor2', 'btn2')" title="Mark as On Duty">&#10003;</button>
-            <div class="tutor-card-flex">
-                <div class="tutor-left">
                     <img src="portraits/UTAs/Alex.jpg" alt="Alex">
                     <h3>Alex</h3>
                 </div>
@@ -66,24 +45,24 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor3">
-            <button class="toggle-btn" id="btn3" onclick="toggleDuty('tutor3', 'btn3')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor2">
+            <button class="toggle-btn" id="btn2" onclick="toggleDuty('tutor2', 'btn2')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
-                    <img src="portraits/UTAs/Benicio.jpg" alt="Benicio">
-                    <h3>Benicio</h3>
+                    <img src="portraits/UTAs/Gavin.jpg" alt="Gavin">
+                    <h3>Gavin</h3>
                 </div>
                 <div class="tutor-right">
                     <div class="supported-courses-label">Supported Courses:</div>
                     <ul class="courses-list">
-                        <li>Math</li>
+                        <li>Precalculus</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="tutor" id="tutor4">
-            <button class="toggle-btn" id="btn4" onclick="toggleDuty('tutor4', 'btn4')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor3">
+            <button class="toggle-btn" id="btn3" onclick="toggleDuty('tutor3', 'btn3')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/UTAs/Ivan.jpg" alt="Ivan">
@@ -104,34 +83,8 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor5">
-            <button class="toggle-btn" id="btn5" onclick="toggleDuty('tutor5', 'btn5')" title="Mark as On Duty">&#10003;</button>
-            <div class="tutor-card-flex">
-                <div class="tutor-left">
-                    <img src="portraits/UTAs/Jordan.jpg" alt="Jordan">
-                    <h3>Jordan</h3>
-                </div>
-                <div class="tutor-right">
-                    <div class="supported-courses-label">Supported Courses:</div>
-                    <ul class="courses-list">
-                        <li>Precalculus</li>
-                        <li>Calculus I</li>
-                        <li>Calculus II</li>
-                        <li>Calculus III</li>
-                        <li>Calculus for Business</li>
-                        <li>Calculus for Biosciences</li>
-                        <li>Linear Algebra</li>
-                        <li>Applied Linear Algebra</li>
-                        <li>Differential Equations</li>
-                        <li>Algebra & Number Systems</li>
-                        <li>Statistics</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="tutor" id="tutor6">
-            <button class="toggle-btn" id="btn6" onclick="toggleDuty('tutor6', 'btn6')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor4">
+            <button class="toggle-btn" id="btn4" onclick="toggleDuty('tutor4', 'btn4')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/UTAs/Luca.jpg" alt="Luca">
@@ -153,8 +106,8 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor7">
-            <button class="toggle-btn" id="btn7" onclick="toggleDuty('tutor7', 'btn7')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor5">
+            <button class="toggle-btn" id="btn5" onclick="toggleDuty('tutor5', 'btn5')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/UTAs/Manuel.jpg" alt="Manuel">
@@ -173,8 +126,24 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor8">
-            <button class="toggle-btn" id="btn8" onclick="toggleDuty('tutor8', 'btn8')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor6">
+            <button class="toggle-btn" id="btn6" onclick="toggleDuty('tutor6', 'btn6')" title="Mark as On Duty">&#10003;</button>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Max.jpg" alt="Max">
+                    <h3>Max</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tutor" id="tutor7">
+            <button class="toggle-btn" id="btn7" onclick="toggleDuty('tutor7', 'btn7')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/UTAs/Nathan.jpg" alt="Nathan">
@@ -191,27 +160,8 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor9">
-            <button class="toggle-btn" id="btn9" onclick="toggleDuty('tutor9', 'btn9')" title="Mark as On Duty">&#10003;</button>
-            <div class="tutor-card-flex">
-                <div class="tutor-left">
-                    <img src="portraits/UTAs/Olivia.jpg" alt="Olivia">
-                    <h3>Olivia</h3>
-                </div>
-                <div class="tutor-right">
-                    <div class="supported-courses-label">Supported Courses:</div>
-                    <ul class="courses-list">
-                        <li>Precalculus</li>
-                        <li>Calculus I</li>
-                        <li>Calculus II</li>
-                        <li>Algebra & Number Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="tutor" id="tutor10">
-            <button class="toggle-btn" id="btn10" onclick="toggleDuty('tutor10', 'btn10')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor8">
+            <button class="toggle-btn" id="btn8" onclick="toggleDuty('tutor8', 'btn8')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/UTAs/Thamara.jpg" alt="Thamara">
@@ -228,8 +178,25 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor11">
-            <button class="toggle-btn" id="btn11" onclick="toggleDuty('tutor11', 'btn11')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor9">
+            <button class="toggle-btn" id="btn9" onclick="toggleDuty('tutor9', 'btn9')" title="Mark as On Duty">&#10003;</button>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/UTAs/Sean.jpg" alt="Sean">
+                    <h3>Sean</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tutor" id="tutor10">
+            <button class="toggle-btn" id="btn10" onclick="toggleDuty('tutor10', 'btn10')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/UTAs/Vicente.jpg" alt="Vicente">
@@ -253,8 +220,8 @@
         </div>
 
         <!-- GTAs -->
-        <div class="tutor" id="tutor12">
-            <button class="toggle-btn" id="btn12" onclick="toggleDuty('tutor12', 'btn12')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor11">
+            <button class="toggle-btn" id="btn11" onclick="toggleDuty('tutor11', 'btn11')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/GTAs/Cris.jpg" alt="Cris">
@@ -276,8 +243,8 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor13">
-            <button class="toggle-btn" id="btn13" onclick="toggleDuty('tutor13', 'btn13')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor12">
+            <button class="toggle-btn" id="btn12" onclick="toggleDuty('tutor12', 'btn12')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/GTAs/Diego.jpg" alt="Diego">
@@ -296,8 +263,8 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor14">
-            <button class="toggle-btn" id="btn14" onclick="toggleDuty('tutor14', 'btn14')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor13">
+            <button class="toggle-btn" id="btn13" onclick="toggleDuty('tutor13', 'btn13')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/GTAs/Eloy.jpg" alt="Eloy">
@@ -316,8 +283,8 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor15">
-            <button class="toggle-btn" id="btn15" onclick="toggleDuty('tutor15', 'btn15')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor14">
+            <button class="toggle-btn" id="btn14" onclick="toggleDuty('tutor14', 'btn14')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/GTAs/Gabriella.jpg" alt="Gabriella">
@@ -332,8 +299,8 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor16">
-            <button class="toggle-btn" id="btn16" onclick="toggleDuty('tutor16', 'btn16')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor15">
+            <button class="toggle-btn" id="btn15" onclick="toggleDuty('tutor15', 'btn15')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/GTAs/Garrett.jpg" alt="Garrett">
@@ -357,8 +324,8 @@
             </div>
         </div>
 
-        <div class="tutor" id="tutor17">
-            <button class="toggle-btn" id="btn17" onclick="toggleDuty('tutor17', 'btn17')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor16">
+            <button class="toggle-btn" id="btn16" onclick="toggleDuty('tutor16', 'btn16')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/GTAs/Gavin.jpg" alt="Gavin">
@@ -376,8 +343,8 @@
             </div>
         </div>        
 
-        <div class="tutor" id="tutor18">
-            <button class="toggle-btn" id="btn18" onclick="toggleDuty('tutor18', 'btn18')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor17">
+            <button class="toggle-btn" id="btn17" onclick="toggleDuty('tutor17', 'btn17')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/GTAs/Jake.jpg" alt="Jake">
@@ -398,6 +365,32 @@
                 </div>
             </div>
         </div>   
+
+        <div class="tutor" id="tutor18">
+            <button class="toggle-btn" id="btn18" onclick="toggleDuty('tutor18', 'btn18')" title="Mark as On Duty">&#10003;</button>
+            <div class="tutor-card-flex">
+                <div class="tutor-left">
+                    <img src="portraits/GTAs/Jordan.jpg" alt="Jordan">
+                    <h3>Jordan</h3>
+                </div>
+                <div class="tutor-right">
+                    <div class="supported-courses-label">Supported Courses:</div>
+                    <ul class="courses-list">
+                        <li>Precalculus</li>
+                        <li>Calculus I</li>
+                        <li>Calculus II</li>
+                        <li>Calculus III</li>
+                        <li>Calculus for Business</li>
+                        <li>Calculus for Biosciences</li>
+                        <li>Linear Algebra</li>
+                        <li>Applied Linear Algebra</li>
+                        <li>Differential Equations</li>
+                        <li>Algebra & Number Systems</li>
+                        <li>Statistics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <div class="tutor" id="tutor19">
             <button class="toggle-btn" id="btn19" onclick="toggleDuty('tutor19', 'btn19')" title="Mark as On Duty">&#10003;</button>
@@ -519,27 +512,6 @@
             <button class="toggle-btn" id="btn25" onclick="toggleDuty('tutor25', 'btn25')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
-                    <img src="portraits/GTAs/Oscar.jpg" alt="Oscar">
-                    <h3>Oscar</h3>
-                </div>
-                <div class="tutor-right">
-                    <div class="supported-courses-label">Supported Courses:</div>
-                    <ul class="courses-list">
-                        <li>Precalculus</li>
-                        <li>Calculus I</li>
-                        <li>Calculus II</li>
-                        <li>Calculus for Biosciences</li>
-                        <li>Linear Algebra</li>
-                        <li>Differential Equations</li>
-                    </ul>
-                </div>
-            </div>
-        </div>   
-
-        <div class="tutor" id="tutor26">
-            <button class="toggle-btn" id="btn26" onclick="toggleDuty('tutor26', 'btn26')" title="Mark as On Duty">&#10003;</button>
-            <div class="tutor-card-flex">
-                <div class="tutor-left">
                     <img src="portraits/GTAs/Ruben.jpg" alt="Ruben">
                     <h3>Ruben</h3>
                 </div>
@@ -552,8 +524,8 @@
             </div>
         </div>  
 
-        <div class="tutor" id="tutor27">
-            <button class="toggle-btn" id="btn27" onclick="toggleDuty('tutor27', 'btn27')" title="Mark as On Duty">&#10003;</button>
+        <div class="tutor" id="tutor26">
+            <button class="toggle-btn" id="btn26" onclick="toggleDuty('tutor26', 'btn26')" title="Mark as On Duty">&#10003;</button>
             <div class="tutor-card-flex">
                 <div class="tutor-left">
                     <img src="portraits/GTAs/Terrence.jpg" alt="Terrence">
@@ -577,9 +549,10 @@
     <!-- Dropdown menu for selecting background image -->
     <div class="background-selector">
         <label for="backgroundSelect" style="font-weight: bold; font-size: 1.5em;">Choose Background:</label>
-        <select id="backgroundSelect">            
+        <select id="backgroundSelect">
+            <option value="backgrounds/spring.jpg" selected>Spring</option>            
             <option value="backgrounds/summer.jpg">Summer</option>
-            <option value="backgrounds/fall.jpg" selected>Fall</option>
+            <option value="backgrounds/fall.jpg">Fall</option>
         </select>
     </div>
 

@@ -1,6 +1,6 @@
 /* Background and Font */
 body {
-    background-image: url('backgrounds/fall.jpg');
+    background-image: url('backgrounds/spring.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,14 +9,21 @@ body {
     text-align: center;
 }
 
+/* Warning Header */
+.warning {
+    color: red;
+    font-weight: bold;
+    background-color: rgb(255, 217, 217);
+}
+
 /* Header */
 h1 {
     font-size: 2.5em;
     background-color: rgba(255, 255, 255, 0.85);
     border: 3px solid black;
     border-radius: 10px;
-    padding: 15px 25px;
-    margin: 20px auto;
+    padding: 10px 25px;
+    margin: 5px auto;
     display: inline-block;
     min-width: 500px;
     font-weight: bold;
