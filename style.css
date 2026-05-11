@@ -1,6 +1,6 @@
 /* Background and Font */
 body {
-    background-image: url('backgrounds/spring.jpg');
+    background-image: url('backgrounds/summer.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -78,12 +78,6 @@ h1 {
     justify-content: center;
 }
 
-/* Expand Left Section if Right Section is Hidden */
-.tutor-card-flex:has(.tutor-right[style*="display: none"]) .tutor-left {
-    flex: 1 1 100%;
-    min-width: 100px;
-}
-
 /* Left Section of Tutor Cards (Names and Portraits) */
 .tutor-left {
     position: relative;
@@ -142,7 +136,7 @@ h1 {
 
 /* Enlarge Toggle Button on Hover */
 .toggle-btn:hover {
-    transform: scale(2);
+    transform: scale(2.5);
 }
 
 /* Vicente's Accessibility Note*/
