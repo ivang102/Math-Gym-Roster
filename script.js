@@ -1,7 +1,6 @@
 // Function to move tutors between on-duty and off-duty grids
-function toggleDuty(toggleButton) {
+function toggleDuty(tutorElement) {
     //Find the parent tutor element for the button
-    const tutorElement = toggleButton.closest('.tutor');
 
     //Find the details section within the tutor element
     const detailsElement = tutorElement.querySelector('.tutor-right');
@@ -14,14 +13,10 @@ function toggleDuty(toggleButton) {
 
     // Move tutor to the appropriate grid and toggle button and details
     if (isOffDuty) {
-        toggleButton.innerHTML = "&times;";
-        toggleButton.title = "Mark as Off Duty";
         detailsElement.style.display = "block";
         onDutyGrid.appendChild(tutorElement);
         tutorElement.classList.remove('off-duty');
     } else {
-        toggleButton.innerHTML = "&#10003;";
-        toggleButton.title = "Mark as On Duty";
         detailsElement.style.display = "none";
         offDutyGrid.appendChild(tutorElement);
         tutorElement.classList.add('off-duty');

@@ -55,6 +55,7 @@ h1 {
     border-radius: 5%;
     text-align: center;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* Shrink Tutor Cards when Off-Duty */
