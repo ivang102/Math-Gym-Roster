@@ -50,9 +50,9 @@ h1 {
     background-color: rgba(255, 255, 255, 0.85);
     width: 480px;
     margin: 0px;
-    padding: 18px;
+    padding: 15px;
     border: 3px solid black;
-    border-radius: 5%;
+    border-radius: 20px;
     text-align: center;
     overflow: hidden;
     cursor: pointer;
@@ -60,7 +60,7 @@ h1 {
 
 /* Shrink Tutor Cards when Off-Duty */
 .tutor.off-duty {
-    width: 230px;
+    width: 200px;
 }
 
 /* Layout for Tutor Card Contents */
@@ -102,7 +102,7 @@ h1 {
     width: 180px;
     height: 180px;
     border: 2px solid gray;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 /* "Supported Courses:" text */
@@ -119,25 +119,6 @@ h1 {
     margin: 0.5em 0 0.5em 0.5em;
     padding-left: 0.5em;
     font-size: 1.3em;
-}
-
-/* Toggle Button */
-.toggle-btn {
-    position: absolute;
-    top: 5px;
-    right: 8px;
-    z-index: 2;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Enlarge Toggle Button on Hover */
-.toggle-btn:hover {
-    transform: scale(2.5);
 }
 
 /* Vicente's Accessibility Note*/
@@ -177,4 +158,5 @@ h1 {
     font-size: 1.5em;
     border: 3px solid black;
     background-color: rgb(200, 200, 200);
+    border-radius: 10px;
 }
