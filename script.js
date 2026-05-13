@@ -1,25 +1,46 @@
 // Function to move tutors between on-duty and off-duty grids
 function toggleDuty(tutorElement) {
-    //Find the parent tutor element for the button
-
-    //Find the details section within the tutor element
+    // Find the details section within the tutor element
     const detailsElement = tutorElement.querySelector('.tutor-right');
 
+    // Find the on-duty and off-duty grids
     const onDutyGrid = document.getElementById('onDutyGrid');
     const offDutyGrid = document.getElementById('offDutyGrid');
 
-    //Check if the tutor is currently in the off-duty grid
+    // Check if the tutor is currently in the off-duty grid
     const isOffDuty = offDutyGrid.contains(tutorElement);
 
-    // Move tutor to the appropriate grid and toggle button and details
+    // Find which grid tutor is getting moved to
+    const destinationGrid = isOffDuty ? onDutyGrid : offDutyGrid;
+
+    // Toggle appearance
     if (isOffDuty) {
         detailsElement.style.display = "block";
-        onDutyGrid.appendChild(tutorElement);
         tutorElement.classList.remove('off-duty');
     } else {
         detailsElement.style.display = "none";
-        offDutyGrid.appendChild(tutorElement);
         tutorElement.classList.add('off-duty');
+    }
+
+
+
+
+    // Find the correct alphabetical spot in the destination grid
+    const movingName = tutorElement.querySelector('h3').innerText.toLowerCase();
+    const existingTutors = Array.from(destinationGrid.querySelectorAll('.tutor'));
+
+    // Find the first tutor in the grid whose name comes AFTER the moving tutor
+    const insertBeforeElement = existingTutors.find(otherTutor => {
+        const otherName = otherTutor.querySelector('h3').innerText.toLowerCase();
+        return otherName > movingName;
+    });
+
+    // Insert the tutor in the correct spot in the destination grid
+    if (insertBeforeElement) {
+        destinationGrid.insertBefore(tutorElement, insertBeforeElement);
+    } else {
+        // If no names are after the moving tutor, just put it at the end
+        destinationGrid.appendChild(tutorElement);
     }
 }
 
