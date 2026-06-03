@@ -120,26 +120,6 @@ h1 {
     font-size: 1.3em;
 }
 
-/* Vicente's Accessibility Note*/
-.accessibility-note {
-    font-size: 1.2em;
-    font-style: italic;
-    width: 100%;
-    text-align: center;
-    background-color: blue;
-    padding: 3px 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    color: white;
-    display: inline-block;
-}
-
-/* Hide Vicente's note when off duty */
-.tutor.off-duty .accessibility-note {
-    display: none;
-}
-
 /*Background Selector*/
 .background-selector {
   background-color: rgba(127, 127, 127, 0.8);
