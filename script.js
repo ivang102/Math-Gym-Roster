@@ -22,9 +22,6 @@ function toggleDuty(tutorElement) {
         tutorElement.classList.add('off-duty');
     }
 
-
-
-
     // Find the correct alphabetical spot in the destination grid
     const movingName = tutorElement.querySelector('h3').innerText.toLowerCase();
     const existingTutors = Array.from(destinationGrid.querySelectorAll('.tutor'));
@@ -44,16 +41,48 @@ function toggleDuty(tutorElement) {
     }
 }
 
-// Initially hide tutor details for those off duty and add them to the off-duty grid
+// Fetch tutor profiles from JSON and build them into the off-duty grid
 document.addEventListener('DOMContentLoaded', function () {
-    const tutors = document.querySelectorAll('.tutor');
     const offDutyGrid = document.getElementById('offDutyGrid');
-    tutors.forEach(function (tutor) {
-        offDutyGrid.appendChild(tutor);
-        const details = tutor.querySelector('.tutor-right');
-        details.style.display = "none";
-    tutor.classList.add('off-duty');
-    });
+
+    fetch('tutors.json')
+        .then(response => response.json())
+        .then(tutors => {
+            //Only load tuttors with "loaded" set to true
+            const activeTutors = tutors.filter(t => t.loaded);
+
+            // Sort loaded tutors alphabetically
+            activeTutors.sort((a, b) => a.name.localeCompare(b.name));
+            
+            //Build tutor cards for each loaded tutor
+            activeTutors.forEach(t => {
+                const tutorCard = document.createElement('div');
+                tutorCard.className = 'tutor off-duty';
+                tutorCard.onclick = function() { toggleDuty(this); };
+
+                // Map courses into exact nested <li> items
+                const coursesHTML = t.courses.map(c => `<li>${c}</li>`).join('');
+
+                // HTML structure for each tutor card
+                tutorCard.innerHTML = `
+                    <div class="tutor-card-flex">
+                        <div class="tutor-left">
+                            <img src="portraits/${t.img}" alt="${t.name}">
+                            <h3>${t.name}</h3>
+                        </div>
+                        <div class="tutor-right" style="display: none;">
+                            <div class="supported-courses-label">Supported Courses:</div>
+                            <ul class="courses-list">
+                                ${coursesHTML}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+
+                offDutyGrid.appendChild(tutorCard);
+            });
+        })
+        .catch(error => console.error('Error fetching data from tutors.json:', error));
 });
 
 // Change the background image based on selected value

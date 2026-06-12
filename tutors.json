@@ -1,0 +1,271 @@
+[
+  {
+    "name": "Alex",
+    "img": "Alex.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Cris",
+    "img": "Cris.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Calculus for Business",
+      "Calculus for Biosciences",
+      "Linear Algebra",
+      "Applied Linear Algebra"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Eloy",
+    "img": "Eloy.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Algebra & Number Systems"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Gabriella",
+    "img": "Gabriella.jpg",
+    "courses": [
+      "Precalculus"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Garrett",
+    "img": "Garrett.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Calculus for Business",
+      "Calculus for Biosciences",
+      "Linear Algebra",
+      "Applied Linear Algebra",
+      "Differential Equations",
+      "Algebra & Number Systems"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Gavin",
+    "img": "Gavin Cruz.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Linear Algebra",
+      "Algebra & Number Systems"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Gavin",
+    "img": "Gavin Cunningham.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Differential Equations"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Ivan",
+    "img": "Ivan.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Calculus for Business",
+      "Linear Algebra",
+      "Differential Equations"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Jake",
+    "img": "Jake.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Calculus for Business",
+      "Linear Algebra",
+      "Applied Linear Algebra",
+      "Algebra & Number Systems"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Jordan",
+    "img": "Jordan.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Calculus for Business",
+      "Calculus for Biosciences",
+      "Linear Algebra",
+      "Applied Linear Algebra",
+      "Differential Equations",
+      "Algebra & Number Systems",
+      "Statistics"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Josiah",
+    "img": "Josiah.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Calculus for Business",
+      "Linear Algebra",
+      "Differential Equations"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Kayla",
+    "img": "Kayla.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Linear Algebra",
+      "Differential Equations",
+      "Algebra & Number Systems"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Kyana",
+    "img": "Kyana.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Luca",
+    "img": "Luca.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus for Business",
+      "Calculus for Biosciences",
+      "Linear Algebra",
+      "Applied Linear Algebra",
+      "Algebra & Number Systems"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Manuel",
+    "img": "Manuel.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Differential Equations"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Max",
+    "img": "Max.jpg",
+    "courses": [
+      "Precalculus"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "McCrea",
+    "img": "McCrea.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Calculus III",
+      "Linear Algebra",
+      "Differential Equations",
+      "Algebra & Number Systems"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Nastaran",
+    "img": "Nastaran.jpg",
+    "courses": [
+      "Precalculus"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Ruben",
+    "img": "Ruben.jpg",
+    "courses": [
+      "Precalculus"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Sean",
+    "img": "Sean.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus II",
+      "Linear Algebra",
+      "Differential Equations",
+      "Algebra & Number Systems"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Terrence",
+    "img": "Terrence.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus for Business",
+      "Differential Equations",
+      "Algebra & Number Systems"
+    ],
+    "loaded": false
+  },
+  {
+    "name": "Thamara",
+    "img": "Thamara.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I",
+      "Calculus for Business"
+    ],
+    "loaded": true
+  }
+]
