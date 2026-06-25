@@ -38,7 +38,7 @@ h1 {
     padding: 10px;
 }
 
-/* Invisible Spacer between On-Duty and Off-Duty Grids*/
+/* Invisible Spacer between On-Duty and Off-Duty Grids */
 .spacer {
     height: 800px; 
 }
@@ -73,7 +73,7 @@ h1 {
     min-height: 220px;
 }
 
-/* Center Content when Off-Duty*/
+/* Center Content when Off-Duty */
 .tutor.off-duty .tutor-card-flex {
     justify-content: center;
 }
@@ -120,7 +120,7 @@ h1 {
     font-size: 1.3em;
 }
 
-/*Background Selector*/
+/* Background Selector */
 .background-selector {
   background-color: rgba(127, 127, 127, 0.8);
   border: 3px solid black;

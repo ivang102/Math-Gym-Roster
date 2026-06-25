@@ -48,13 +48,13 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('tutors.json')
         .then(response => response.json())
         .then(tutors => {
-            //Only load tuttors with "loaded" set to true
+            // Only load tuttors with "loaded" set to true
             const activeTutors = tutors.filter(t => t.loaded);
 
             // Sort loaded tutors alphabetically
             activeTutors.sort((a, b) => a.name.localeCompare(b.name));
             
-            //Build tutor cards for each loaded tutor
+            // Build tutor cards for each loaded tutor
             activeTutors.forEach(t => {
                 const tutorCard = document.createElement('div');
                 tutorCard.className = 'tutor off-duty';
