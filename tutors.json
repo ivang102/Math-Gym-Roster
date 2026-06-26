@@ -177,7 +177,10 @@
     "name": "Max",
     "img": "Max.jpg",
     "courses": [
-      "Precalculus"
+      "Precalculus",
+      "Calculus I, II",
+      "Calculus for Business",
+      "Algebra & Number Systems"
     ],
     "loaded": true
   },
