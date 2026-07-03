@@ -15,9 +15,7 @@
     "img": "Cris.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Calculus for Business",
       "Calculus for Biosciences",
       "Linear Algebra",
@@ -30,18 +28,8 @@
     "img": "Eloy.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Algebra & Number Systems"
-    ],
-    "loaded": false
-  },
-  {
-    "name": "Gabriella",
-    "img": "Gabriella.jpg",
-    "courses": [
-      "Precalculus"
     ],
     "loaded": false
   },
@@ -50,9 +38,7 @@
     "img": "Garrett.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Calculus for Business",
       "Calculus for Biosciences",
       "Linear Algebra",
@@ -67,9 +53,7 @@
     "img": "Gavin Cruz.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Linear Algebra",
       "Algebra & Number Systems"
     ],
@@ -80,8 +64,7 @@
     "img": "Gavin Cunningham.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
+      "Calculus I, II",
       "Differential Equations"
     ],
     "loaded": false
@@ -91,9 +74,7 @@
     "img": "Ivan.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Calculus for Business",
       "Linear Algebra",
       "Differential Equations"
@@ -105,9 +86,7 @@
     "img": "Jake.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Calculus for Business",
       "Linear Algebra",
       "Applied Linear Algebra",
@@ -136,9 +115,7 @@
     "img": "Josiah.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Calculus for Business",
       "Linear Algebra",
       "Differential Equations"
@@ -150,9 +127,7 @@
     "img": "Kayla.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Linear Algebra",
       "Differential Equations",
       "Algebra & Number Systems"
@@ -173,8 +148,7 @@
     "img": "Luca.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
+      "Calculus I, II",
       "Calculus for Business",
       "Calculus for Biosciences",
       "Linear Algebra",
@@ -206,9 +180,7 @@
     "img": "McCrea.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
-      "Calculus III",
+      "Calculus I, II, III",
       "Linear Algebra",
       "Differential Equations",
       "Algebra & Number Systems"
@@ -236,8 +208,7 @@
     "img": "Sean.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I",
-      "Calculus II",
+      "Calculus I, II",
       "Linear Algebra",
       "Differential Equations",
       "Algebra & Number Systems"
