@@ -38,7 +38,7 @@ h1 {
     padding: 10px;
 }
 
-/* Invisible Spacer between On-Duty and Off-Duty Grids */
+/* Invisible Spacer between On-Duty and Off-Duty Grids*/
 .spacer {
     height: 800px; 
 }
@@ -73,7 +73,7 @@ h1 {
     min-height: 220px;
 }
 
-/* Center Content when Off-Duty */
+/* Center Content when Off-Duty*/
 .tutor.off-duty .tutor-card-flex {
     justify-content: center;
 }
@@ -143,4 +143,29 @@ h1 {
 /* Tells all form elements to stop using browser defaults and copy the body font */
 input, select, textarea, button {
     font-family: inherit;
+}
+    
+/* The outer alert block holding the text */
+.session-banner {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000000;
+    border: 3px solid #000000;
+    border-radius: 15px;
+    padding: 5px 5px;
+    margin: 5px auto;
+    max-width: 900px;
+    font-size: 1.4em;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Green theme override when the session goes live */
+.session-banner-live {
+    border-color: #28a745; 
+    background-color: #f6fff8;
+    color: #155724;
 }

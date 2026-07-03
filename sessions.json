@@ -1,0 +1,9 @@
+{
+  "Monday": [],
+  "Tuesday": [],
+  "Wednesday": [],
+  "Thursday": [
+    { "subject": "Test", "start": "20:00" }
+  ],
+  "Friday": []
+}
