@@ -4,7 +4,9 @@
     "img": "Alex.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I"
+      "Calculus I, II",
+      "Calculus for Business",
+      "Differential Equations"
     ],
     "loaded": true
   },
@@ -28,14 +30,6 @@
       "Precalculus",
       "Calculus I, II, III",
       "Algebra & Number Systems"
-    ],
-    "loaded": false
-  },
-  {
-    "name": "Gabriella",
-    "img": "Gabriella.jpg",
-    "courses": [
-      "Precalculus"
     ],
     "loaded": false
   },
