@@ -1,10 +1,24 @@
 {
-  "Monday": [],
-  "Tuesday": [],
-  "Wednesday": [],
-  "Thursday": [
-    { "subject": "Test", "start": "20:00" }
-  ],
-  "Friday": [
-  ]
+  "Monday": {
+    "closingTime": "17:00",
+    "sessions": []
+  },
+  "Tuesday": {
+    "closingTime": "17:00",
+    "sessions": []
+  },
+  "Wednesday": {
+    "closingTime": "17:00",
+    "sessions": []
+  },
+  "Thursday": {
+    "closingTime": "17:00",
+    "sessions": [
+      { "subject": "Test", "start": "20:00" }
+    ]
+  },
+  "Friday": {
+    "closingTime": "15:00",
+    "sessions": []
+  }
 }

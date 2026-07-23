@@ -56,18 +56,19 @@ function updateSessionTimers() {
             const currentMinutes = (now.getHours() * 60) + now.getMinutes();
             const currentSeconds = now.getSeconds();
 
-            // Get today's list of sessions
-            const todaysSessions = data[currentDay] || [];
+            // Extract today's standardized data directly
+            const dayData = data[currentDay] || { closingTime: null, sessions: [] };
+            const todaysSessions = dayData.sessions;
             let bannerHTML = '';
 
-            // Loop through today's sessions to find a match
+            // 1. Loop through today's TWS sessions to find a match
             todaysSessions.forEach(session => {
                 const [startHour, startMinute] = session.start.split(':').map(Number);
                 const startMinutesTotal = (startHour * 60) + startMinute;
 
                 // Define windows in minutes
                 const upcomingWindowStart = startMinutesTotal - 15;
-                const bannerHideCutoff = startMinutesTotal + 45; // Banner disappears after 30 mins
+                const bannerHideCutoff = startMinutesTotal + 45; // Banner disappears after 45 mins
                 const actualSessionEnd = startMinutesTotal + 60; // True session duration is 60 mins
 
                 // Scenario A: Upcoming Session (15 mins before start)
@@ -79,13 +80,12 @@ function updateSessionTimers() {
 
                     bannerHTML = `
                         <div class="session-banner">
-                            ⏳ <strong>${session.subject} TWS</strong> starting in ${formattedTime}
+                            ⏳ ${session.subject} TWS starting in ${formattedTime} ⏳
                         </div>
                     `;
                 }
-                // Scenario B: In Session Now (Display for first 30 mins, but count down to the full hour)
+                // Scenario B: In Session Now (Display for first 45 mins, but count down to full hour)
                 else if (currentMinutes >= startMinutesTotal && currentMinutes < bannerHideCutoff) {
-                    // 🛠️ Math fix: Calculate remaining time until the full 60-minute mark
                     const totalSecondsLeft = ((actualSessionEnd - currentMinutes) * 60) - currentSeconds;
                     const displayMins = Math.floor(totalSecondsLeft / 60);
                     const displaySecs = totalSecondsLeft % 60;
@@ -93,11 +93,31 @@ function updateSessionTimers() {
 
                     bannerHTML = `
                         <div class="session-banner session-banner-live">
-                            🟢 <strong>${session.subject} TWS</strong> is currently in session (ends in ${formattedTime})
+                            🟢 ${session.subject} TWS is currently in session (ends in ${formattedTime}) 🟢
                         </div>
                     `;
                 }
             });
+
+            // 2. If no TWS banner is showing, check for Center Closing Warning (15 mins before close)
+            if (!bannerHTML && dayData.closingTime) {
+                const [closeHour, closeMinute] = dayData.closingTime.split(':').map(Number);
+                const closeMinutesTotal = (closeHour * 60) + closeMinute;
+                const closingWarningStart = closeMinutesTotal - 15;
+
+                if (currentMinutes >= closingWarningStart && currentMinutes < closeMinutesTotal) {
+                    const totalSecondsLeft = ((closeMinutesTotal - currentMinutes) * 60) - currentSeconds;
+                    const displayMins = Math.floor(totalSecondsLeft / 60);
+                    const displaySecs = totalSecondsLeft % 60;
+                    const formattedTime = `${displayMins}:${displaySecs.toString().padStart(2, '0')}`;
+
+                    bannerHTML = `
+                        <div class="session-banner session-banner-closing">
+                            ⚠️ Math Gym Closing in ${formattedTime}⚠️
+                        </div>
+                    `;
+                }
+            }
 
             // Put the generated banner on screen (or clear it out if nothing matches)
             container.innerHTML = bannerHTML;

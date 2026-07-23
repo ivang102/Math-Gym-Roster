@@ -145,14 +145,22 @@ input, select, textarea, button {
     font-family: inherit;
 }
     
-/* The outer alert block holding the text */
+/* Eliminate extra margins on containers that sit between the text and banner */
+#onDutyGrid,
+#live-sessions-container {
+    margin: 0;
+    padding: 0;
+}
+
+/* TWS / Closing Banner */
 .session-banner {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.95);
     color: #000000;
     border: 3px solid #000000;
     border-radius: 15px;
-    padding: 5px 5px;
-    margin: 5px auto;
+    padding: 7px 25px;
+    margin: 5px auto; 
+    margin-bottom: 10px;
     max-width: 900px;
     font-size: 1.4em;
     font-weight: bold;
@@ -162,10 +170,14 @@ input, select, textarea, button {
     align-items: center;
     gap: 8px;
 }
-
-/* Green theme override when the session goes live */
+/* Green theme override when a TWS is active */
 .session-banner-live {
     border-color: #28a745; 
-    background-color: #f6fff8;
-    color: #155724;
+    background-color: rgba(200, 255, 200, 0.85);
+}
+
+/* Warning theme override for 15-minute center closing countdown */
+.session-banner-closing {
+    border-color: #ff9800;
+    background-color: #fff0c8;
 }
