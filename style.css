@@ -9,17 +9,15 @@ body {
     text-align: center;
 }
 
-/* Warning Header */
-.warning {
-    color: red;
-    font-weight: bold;
-    background-color: rgb(255, 217, 217);
+/* Tells all form elements to stop using browser defaults and copy the body font */
+input, select, textarea, button {
+    font-family: inherit;
 }
 
-/* Header */
-h1 {
-    font-size: 2.5em;
-    background-color: rgba(255, 255, 255, 0.85);
+/* Default Header Styling */
+.header {
+    background-color: rgb(255, 255, 255);
+    font-size: 2.3em;
     border: 3px solid black;
     border-radius: 10px;
     padding: 10px 25px;
@@ -27,6 +25,20 @@ h1 {
     display: inline-block;
     min-width: 500px;
     font-weight: bold;
+}
+
+/* Sign In/Out Warning Header */
+#warning {
+    color: rgb(255, 100, 0);
+    background-color: rgb(255, 230, 210);
+    border-color: rgb(110, 60, 20);
+}
+
+/* Tutors Help Header */
+#help {
+    color: rgb(0, 60, 120);
+    background-color: rgb(217, 255, 255);
+    border-color: rgb(0, 40, 80);
 }
 
 /* Layout and Positioning for the Tutor Cards */
@@ -122,7 +134,7 @@ h1 {
 
 /* Background Selector */
 .background-selector {
-  background-color: rgba(127, 127, 127, 0.8);
+  background-color: rgb(160, 160, 180);
   border: 3px solid black;
   border-radius: 20px;
   padding: 10px 15px;
@@ -136,13 +148,8 @@ h1 {
     padding: 5px;
     font-size: 1.5em;
     border: 3px solid black;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(220, 220, 240);
     border-radius: 10px;
-}
-
-/* Tells all form elements to stop using browser defaults and copy the body font */
-input, select, textarea, button {
-    font-family: inherit;
 }
     
 /* Eliminate extra margins on containers that sit between the text and banner */
@@ -154,30 +161,37 @@ input, select, textarea, button {
 
 /* TWS / Closing Banner */
 .session-banner {
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #000000;
-    border: 3px solid #000000;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 15px;
     padding: 7px 25px;
-    margin: 5px auto; 
+    margin: 5px auto;
     margin-bottom: 10px;
-    max-width: 900px;
+    max-width: 850px;
     font-size: 1.4em;
     font-weight: bold;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
 }
-/* Green theme override when a TWS is active */
-.session-banner-live {
-    border-color: #28a745; 
-    background-color: rgba(200, 255, 200, 0.85);
+
+/* Upcoming TWS banner */
+.session-banner-upcoming {
+    border-color: rgb(255, 152, 0);
+    background-color: rgb(255, 255, 200);
+    color: rgb(50, 50, 0);
 }
 
-/* Warning theme override for 15-minute center closing countdown */
-.session-banner-closing {
-    border-color: #ff9800;
-    background-color: #fff0c8;
+/* Active TWS banner */
+.session-banner-live {
+    border-color: rgb(40, 180, 0); 
+    background-color: rgb(220, 255, 220);
+    color: rgb(0, 80, 0);
+}
+
+/* Closing or Closed banner */
+.session-banner-close {
+    border-color: rgb(255, 0, 0);
+    background-color: rgb(255, 220, 220);
+    color: rgb(255, 0, 0);
 }

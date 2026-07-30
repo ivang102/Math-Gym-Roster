@@ -41,7 +41,7 @@ function toggleDuty(tutorElement) {
     }
 }
 
-// Function to update the single active TWS session timer using day-grouped logic
+// Function to update the active TWS or Closing timer
 function updateSessionTimers() {
     const container = document.getElementById('live-sessions-container');
     if (!container) return;
@@ -61,62 +61,72 @@ function updateSessionTimers() {
             const todaysSessions = dayData.sessions;
             let bannerHTML = '';
 
-            // 1. Loop through today's TWS sessions to find a match
-            todaysSessions.forEach(session => {
-                const [startHour, startMinute] = session.start.split(':').map(Number);
-                const startMinutesTotal = (startHour * 60) + startMinute;
-
-                // Define windows in minutes
-                const upcomingWindowStart = startMinutesTotal - 15;
-                const bannerHideCutoff = startMinutesTotal + 45; // Banner disappears after 45 mins
-                const actualSessionEnd = startMinutesTotal + 60; // True session duration is 60 mins
-
-                // Scenario A: Upcoming Session (15 mins before start)
-                if (currentMinutes >= upcomingWindowStart && currentMinutes < startMinutesTotal) {
-                    const totalSecondsLeft = ((startMinutesTotal - currentMinutes) * 60) - currentSeconds;
-                    const displayMins = Math.floor(totalSecondsLeft / 60);
-                    const displaySecs = totalSecondsLeft % 60;
-                    const formattedTime = `${displayMins}:${displaySecs.toString().padStart(2, '0')}`;
-
-                    bannerHTML = `
-                        <div class="session-banner">
-                            ⏳ ${session.subject} TWS starting in ${formattedTime} ⏳
-                        </div>
-                    `;
-                }
-                // Scenario B: In Session Now (Display for first 45 mins, but count down to full hour)
-                else if (currentMinutes >= startMinutesTotal && currentMinutes < bannerHideCutoff) {
-                    const totalSecondsLeft = ((actualSessionEnd - currentMinutes) * 60) - currentSeconds;
-                    const displayMins = Math.floor(totalSecondsLeft / 60);
-                    const displaySecs = totalSecondsLeft % 60;
-                    const formattedTime = `${displayMins}:${displaySecs.toString().padStart(2, '0')}`;
-
-                    bannerHTML = `
-                        <div class="session-banner session-banner-live">
-                            🟢 ${session.subject} TWS is currently in session (ends in ${formattedTime}) 🟢
-                        </div>
-                    `;
-                }
-            });
-
-            // 2. If no TWS banner is showing, check for Center Closing Warning (15 mins before close)
-            if (!bannerHTML && dayData.closingTime) {
+            // 1. Check for closing warning
+            if (dayData.closingTime) {
                 const [closeHour, closeMinute] = dayData.closingTime.split(':').map(Number);
                 const closeMinutesTotal = (closeHour * 60) + closeMinute;
-                const closingWarningStart = closeMinutesTotal - 15;
+                const closingWarningStart = closeMinutesTotal - 30;
 
-                if (currentMinutes >= closingWarningStart && currentMinutes < closeMinutesTotal) {
+                // Scenario A: Math Gym is closed (after closing time)
+                if (currentMinutes >= closeMinutesTotal) {
+                    bannerHTML = `
+                        <div class="session-banner session-banner-close">
+                            🔴 Math Gym is Closed 🔴
+                        </div>
+                    `;
+                // Scenario B: Math Gym closing soon (30 mins before close)
+                } else if (currentMinutes >= closingWarningStart) {
                     const totalSecondsLeft = ((closeMinutesTotal - currentMinutes) * 60) - currentSeconds;
                     const displayMins = Math.floor(totalSecondsLeft / 60);
                     const displaySecs = totalSecondsLeft % 60;
                     const formattedTime = `${displayMins}:${displaySecs.toString().padStart(2, '0')}`;
 
                     bannerHTML = `
-                        <div class="session-banner session-banner-closing">
-                            ⚠️ Math Gym Closing in ${formattedTime}⚠️
+                        <div class="session-banner session-banner-close">
+                            ‼️ Math Gym Closing in ${formattedTime} ‼️
                         </div>
                     `;
                 }
+            }
+
+            // 2. Only check for TWS if no closing warning is active
+            if (!bannerHTML) {
+                todaysSessions.forEach(session => {
+                    const [startHour, startMinute] = session.start.split(':').map(Number);
+                    const startMinutesTotal = (startHour * 60) + startMinute;
+
+                    // Define windows in minutes
+                    const upcomingWindowStart = startMinutesTotal - 15;
+                    const bannerHideCutoff = startMinutesTotal + 45; // Banner disappears after 45 mins
+                    const actualSessionEnd = startMinutesTotal + 60; // True session duration is 60 mins
+
+                    // Scenario A: Upcoming Session (15 mins before start)
+                    if (currentMinutes >= upcomingWindowStart && currentMinutes < startMinutesTotal) {
+                        const totalSecondsLeft = ((startMinutesTotal - currentMinutes) * 60) - currentSeconds;
+                        const displayMins = Math.floor(totalSecondsLeft / 60);
+                        const displaySecs = totalSecondsLeft % 60;
+                        const formattedTime = `${displayMins}:${displaySecs.toString().padStart(2, '0')}`;
+
+                        bannerHTML = `
+                            <div class="session-banner session-banner-upcoming">
+                                🕰️ ${session.subject} TWS starting in ${formattedTime} 🕰️
+                            </div>
+                        `;
+                    }
+                    // Scenario B: In Session Now (Display for 45 mins after start)
+                    else if (currentMinutes >= startMinutesTotal && currentMinutes < bannerHideCutoff) {
+                        const totalSecondsLeft = ((actualSessionEnd - currentMinutes) * 60) - currentSeconds;
+                        const displayMins = Math.floor(totalSecondsLeft / 60);
+                        const displaySecs = totalSecondsLeft % 60;
+                        const formattedTime = `${displayMins}:${displaySecs.toString().padStart(2, '0')}`;
+
+                        bannerHTML = `
+                            <div class="session-banner session-banner-live">
+                                🟢 ${session.subject} TWS is currently in session (ends in ${formattedTime}) 🟢
+                            </div>
+                        `;
+                    }
+                });
             }
 
             // Put the generated banner on screen (or clear it out if nothing matches)
@@ -129,7 +139,7 @@ function updateSessionTimers() {
 document.addEventListener('DOMContentLoaded', function () {
     const offDutyGrid = document.getElementById('offDutyGrid');
 
-    //Fetch tutor profiles from JSON and build them into the off-duty grid
+    // Fetch tutor profiles from JSON and build them into the off-duty grid
     fetch('tutors.json')
         .then(response => response.json())
         .then(tutors => {
