@@ -23,12 +23,12 @@ function toggleDuty(tutorElement) {
     }
 
     // Find the correct alphabetical spot in the destination grid
-    const movingName = tutorElement.querySelector('h3').innerText.toLowerCase();
+    const movingName = (tutorElement.dataset.sort || tutorElement.querySelector('h3').innerText).toLowerCase();
     const existingTutors = Array.from(destinationGrid.querySelectorAll('.tutor'));
 
     // Find the first tutor in the grid whose name comes AFTER the moving tutor
     const insertBeforeElement = existingTutors.find(otherTutor => {
-        const otherName = otherTutor.querySelector('h3').innerText.toLowerCase();
+        const otherName = (otherTutor.dataset.sort || otherTutor.querySelector('h3').innerText).toLowerCase();
         return otherName > movingName;
     });
 
@@ -147,12 +147,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const activeTutors = tutors.filter(t => t.loaded);
 
             // Sort loaded tutors alphabetically
-            activeTutors.sort((a, b) => a.name.localeCompare(b.name));
+            activeTutors.sort((a, b) => (a.sortKey || a.name).localeCompare(b.sortKey || b.name));
             
             // Build tutor cards for each loaded tutor
             activeTutors.forEach(t => {
                 const tutorCard = document.createElement('div');
                 tutorCard.className = 'tutor off-duty';
+                tutorCard.dataset.sort = t.sortKey || t.name;
                 tutorCard.onclick = function() { toggleDuty(this); };
 
                 // Map courses into exact nested <li> items

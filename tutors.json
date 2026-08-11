@@ -21,7 +21,18 @@
       "Linear Algebra",
       "Applied Linear Algebra"
     ],
-    "loaded": false
+    "loaded": true
+  },
+  {
+    "name": "Diego",
+    "img": "Rowdy.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I, II, III",
+      "Applied Linear Algebra",
+      "Algebra & Number Systems"
+    ],
+    "loaded": true
   },
   {
     "name": "Eloy",
@@ -31,7 +42,21 @@
       "Calculus I, II, III",
       "Algebra & Number Systems"
     ],
-    "loaded": false
+    "loaded": true
+  },
+  {
+    "name": "Fuhad",
+    "img": "Rowdy.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I, II",
+      "Calculus for Business",
+      "Calculus for Biosciences",
+      "Linear Algebra",
+      "Applied Linear Algebra",
+      "Differential Equations"
+    ],
+    "loaded": true
   },
   {
     "name": "Garrett",
@@ -50,7 +75,8 @@
   },
   {
     "name": "Gavin",
-    "img": "Gavin Cruz.jpg",
+    "sortKey": "GavinCr",
+    "img": "GavinCr.jpg",
     "courses": [
       "Precalculus",
       "Calculus I, II, III",
@@ -61,23 +87,57 @@
   },
   {
     "name": "Gavin",
-    "img": "Gavin Cunningham.jpg",
+    "sortKey": "GavinCu",
+    "img": "GavinCu.jpg",
     "courses": [
       "Precalculus",
       "Calculus I, II",
       "Differential Equations"
     ],
-    "loaded": false
+    "loaded": true
+  },
+  {
+    "name": "Gisselle",
+    "img": "Rowdy.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I, II, III"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Hector",
+    "img": "Rowdy.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I, II, III",
+      "Linear Algebra"
+    ],
+    "loaded": true
   },
   {
     "name": "Ivan",
-    "img": "Ivan.jpg",
+    "sortKey": "IvanG",
+    "img": "IvanG.jpg",
     "courses": [
       "Precalculus",
       "Calculus I, II, III",
       "Calculus for Business",
       "Linear Algebra",
       "Differential Equations"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Ivan",
+    "sortKey": "IvanM",
+    "img": "Rowdy.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I, II",
+      "Linear Algebra",
+      "Differential Equations",
+      "Algebra & Number Systems"
     ],
     "loaded": true
   },
@@ -92,7 +152,7 @@
       "Applied Linear Algebra",
       "Algebra & Number Systems"
     ],
-    "loaded": false
+    "loaded": true
   },
   {
     "name": "Jordan",
@@ -109,18 +169,6 @@
       "Statistics"
     ],
     "loaded": true
-  },
-  {
-    "name": "Josiah",
-    "img": "Josiah.jpg",
-    "courses": [
-      "Precalculus",
-      "Calculus I, II, III",
-      "Calculus for Business",
-      "Linear Algebra",
-      "Differential Equations"
-    ],
-    "loaded": false
   },
   {
     "name": "Kayla",
@@ -155,7 +203,7 @@
       "Applied Linear Algebra",
       "Algebra & Number Systems"
     ],
-    "loaded": false
+    "loaded": true
   },
   {
     "name": "Manuel",
@@ -179,6 +227,19 @@
     "loaded": true
   },
   {
+    "name": "Maya",
+    "img": "Maya.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I, II, III",
+      "Linear Algebra",
+      "Applied Linear Algebra",
+      "Differential Equations",
+      "Algebra & Number Systems"
+    ],
+    "loaded": true
+  },
+  {
     "name": "McCrea",
     "img": "McCrea.jpg",
     "courses": [
@@ -191,12 +252,29 @@
     "loaded": true
   },
   {
-    "name": "Nastaran",
-    "img": "Nastaran.jpg",
+    "name": "Oscar",
+    "img": "Oscar.jpg",
     "courses": [
-      "Precalculus"
+      "Precalculus",
+      "Calculus I, II",
+      "Calculus for Business",
+      "Calculus for Biosciences",
+      "Applied Linear Algebra",
+      "Differential Equations"
     ],
-    "loaded": false
+    "loaded": true
+  },
+  {
+    "name": "Riley",
+    "img": "Riley.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I, II, III",
+      "Calculus for Business",
+      "Calculus for Biosciences",
+      "Algebra & Number Systems"
+    ],
+    "loaded": true
   },
   {
     "name": "Ruben",
@@ -204,7 +282,7 @@
     "courses": [
       "Precalculus"
     ],
-    "loaded": false
+    "loaded": true
   },
   {
     "name": "Sean",
@@ -219,24 +297,25 @@
     "loaded": true
   },
   {
-    "name": "Terrence",
-    "img": "Terrence.jpg",
-    "courses": [
-      "Precalculus",
-      "Calculus I",
-      "Calculus for Business",
-      "Differential Equations",
-      "Algebra & Number Systems"
-    ],
-    "loaded": false
-  },
-  {
     "name": "Thamara",
     "img": "Thamara.jpg",
     "courses": [
       "Precalculus",
       "Calculus I",
       "Calculus for Business"
+    ],
+    "loaded": true
+  },
+  {
+    "name": "Victoria",
+    "img": "Victoria.jpg",
+    "courses": [
+      "Precalculus",
+      "Calculus I, II",
+      "Calculus for Business",
+      "Calculus for Biosciences",
+      "Differential Equations",
+      "Algebra & Number Systems"
     ],
     "loaded": true
   }

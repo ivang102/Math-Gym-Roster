@@ -1,6 +1,6 @@
 /* Background and Font */
 body {
-    background-image: url('backgrounds/summer.jpg');
+    background-image: url('backgrounds/fall.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,9 +29,9 @@ input, select, textarea, button {
 
 /* Sign In/Out Warning Header */
 #warning {
-    color: rgb(255, 100, 0);
-    background-color: rgb(255, 230, 210);
-    border-color: rgb(110, 60, 20);
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 240, 240);
+    border-color: rgb(120, 0, 0);
 }
 
 /* Tutors Help Header */
