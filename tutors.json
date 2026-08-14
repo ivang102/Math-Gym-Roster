@@ -98,7 +98,7 @@
   },
   {
     "name": "Gisselle",
-    "img": "Rowdy.jpg",
+    "img": "Gisselle.jpg",
     "courses": [
       "Precalculus",
       "Calculus I, II, III"
@@ -107,7 +107,7 @@
   },
   {
     "name": "Hector",
-    "img": "Rowdy.jpg",
+    "img": "Hector.jpg",
     "courses": [
       "Precalculus",
       "Calculus I, II, III",
@@ -131,7 +131,7 @@
   {
     "name": "Ivan",
     "sortKey": "IvanM",
-    "img": "Rowdy.jpg",
+    "img": "IvanM.jpg",
     "courses": [
       "Precalculus",
       "Calculus I, II",
