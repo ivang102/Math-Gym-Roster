@@ -1,0 +1,44 @@
+{
+  "Monday": {
+    "closingTime": "17:00",
+    "sessions": [
+      { "subject": "Calculus for Business", "start": "11:00" },
+      { "subject": "Calculus II", "start": "13:00" },
+      { "subject": "Calculus I", "start": "15:00" },
+      { "subject": "Precalculus", "start": "16:00" }
+    ]
+  },
+  "Tuesday": {
+    "closingTime": "17:00",
+    "sessions": [
+      { "subject": "Precalculus", "start": "10:00" },
+      { "subject": "Calculus II", "start": "11:00" },
+      { "subject": "Calculus I", "start": "13:00" },
+      { "subject": "Calculus for Business", "start": "14:00" }
+    ]
+  },
+  "Wednesday": {
+    "closingTime": "17:00",
+    "sessions": [
+      { "subject": "Calculus II", "start": "11:00" },
+      { "subject": "Calculus I", "start": "12:00" },
+      { "subject": "Precalculus", "start": "15:00" }
+    ]
+  },
+  "Thursday": {
+    "closingTime": "17:00",
+    "sessions": [
+      { "subject": "Calculus I", "start": "09:00" },
+      { "subject": "Calculus II", "start": "11:00" },
+      { "subject": "Precalculus", "start": "13:00" }
+    ]
+  },
+  "Friday": {
+    "closingTime": "15:00",
+    "sessions": [
+      { "subject": "Precalculus", "start": "09:00" },
+      { "subject": "Calculus I", "start": "10:00" },
+      { "subject": "Calculus II", "start": "11:00" }
+    ]
+  }
+}
