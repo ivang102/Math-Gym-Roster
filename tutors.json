@@ -309,10 +309,9 @@
     "img": "Victoria.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I, II",
+      "Calculus I",
       "Calculus for Business",
       "Calculus for Biosciences",
-      "Differential Equations",
       "Algebra & Number Systems"
     ],
     "loaded": true
