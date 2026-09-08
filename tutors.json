@@ -51,10 +51,7 @@
       "Precalculus",
       "Calculus I, II",
       "Calculus for Business",
-      "Calculus for Biosciences",
-      "Linear Algebra",
-      "Applied Linear Algebra",
-      "Differential Equations"
+      "Linear Algebra"
     ],
     "loaded": true
   },
@@ -187,7 +184,8 @@
     "img": "Kyana.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I"
+      "Calculus I, II",
+      "Calculus for Business"
     ],
     "loaded": true
   },
@@ -311,10 +309,9 @@
     "img": "Victoria.jpg",
     "courses": [
       "Precalculus",
-      "Calculus I, II",
+      "Calculus I",
       "Calculus for Business",
       "Calculus for Biosciences",
-      "Differential Equations",
       "Algebra & Number Systems"
     ],
     "loaded": true
